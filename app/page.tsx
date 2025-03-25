@@ -13,14 +13,14 @@ export default function Home() {
         <ThemeToggle />
       </div>
       <header className="mb-10 text-center">
-        <h1 className="text-4xl font-bold mb-2">SupaSafe Password Manager</h1>
+        <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-400 text-transparent bg-clip-text">SupaSafe Password Manager</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">Your passwords, secured with one master key</p>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl">Project Overview</CardTitle>
+        <Card className="border-purple-500/20 shadow-md">
+          <CardHeader className="bg-purple-500/5 rounded-t-lg">
+            <CardTitle className="text-2xl bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">Project Overview</CardTitle>
             <CardDescription>A secure password manager built with React, Node.js, and Supabase</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -51,12 +51,19 @@ export default function Home() {
                 </Button>
               </Link>
             </div>
+            <div className="mt-4">
+              <Link href="/srs">
+                <Button variant="default" className="w-full">
+                  View SRS Document
+                </Button>
+              </Link>
+            </div>
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl">System Architecture</CardTitle>
+        <Card className="border-blue-500/20 shadow-md">
+          <CardHeader className="bg-blue-500/5 rounded-t-lg">
+            <CardTitle className="text-2xl bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text">System Architecture</CardTitle>
             <CardDescription>Three-tier architecture with secure encryption</CardDescription>
           </CardHeader>
           <CardContent>
@@ -86,9 +93,9 @@ export default function Home() {
         </Card>
       </div>
 
-      <h2 className="text-2xl font-bold mb-6">User Flows</h2>
+      <h2 className="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-400 text-transparent bg-clip-text">User Flows</h2>
       <Tabs defaultValue="login" className="w-full mb-12">
-        <TabsList className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 mb-4">
+        <TabsList className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 mb-4">
           <TabsTrigger value="login">Login</TabsTrigger>
           <TabsTrigger value="register">Register</TabsTrigger>
           <TabsTrigger value="logout">Logout</TabsTrigger>
@@ -96,6 +103,7 @@ export default function Home() {
           <TabsTrigger value="update">Update Password</TabsTrigger>
           <TabsTrigger value="retrieve">Retrieve Password</TabsTrigger>
           <TabsTrigger value="delete">Delete Password</TabsTrigger>
+          <TabsTrigger value="srs">SRS</TabsTrigger>
         </TabsList>
 
         <TabsContent value="login" className="border rounded-lg p-4">
@@ -181,13 +189,21 @@ export default function Home() {
             />
           </div>
         </TabsContent>
+
+        <TabsContent value="srs" className="border rounded-lg p-4">
+          <h3 className="text-xl font-bold mb-4">Software Requirements Specification</h3>
+          <p className="mb-4">The SRS document outlines the requirements and specifications for the SupaSafe password manager application.</p>
+          <Link href="/srs">
+            <Button className="w-full">View Full SRS Document</Button>
+          </Link>
+        </TabsContent>
       </Tabs>
 
-      <h2 className="text-2xl font-bold mb-6">Database Schema</h2>
+      <h2 className="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-400 text-transparent bg-clip-text">Database Schema</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-        <Card>
-          <CardHeader>
-            <CardTitle>Database Tables</CardTitle>
+        <Card className="border-teal-500/20 shadow-md">
+          <CardHeader className="bg-teal-500/5 rounded-t-lg">
+            <CardTitle className="bg-gradient-to-r from-teal-400 to-emerald-500 text-transparent bg-clip-text">Database Tables</CardTitle>
             <CardDescription>PostgreSQL schema for SupaSafe</CardDescription>
           </CardHeader>
           <CardContent>
@@ -202,9 +218,9 @@ export default function Home() {
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle>Entity Relationship Diagram</CardTitle>
+        <Card className="border-amber-500/20 shadow-md">
+          <CardHeader className="bg-amber-500/5 rounded-t-lg">
+            <CardTitle className="bg-gradient-to-r from-amber-400 to-yellow-500 text-transparent bg-clip-text">Entity Relationship Diagram</CardTitle>
             <CardDescription>Relationships between entities</CardDescription>
           </CardHeader>
           <CardContent>
@@ -220,10 +236,10 @@ export default function Home() {
         </Card>
       </div>
 
-      <h2 className="text-2xl font-bold mb-6">Security Architecture</h2>
-      <Card className="mb-12">
-        <CardHeader>
-          <CardTitle>Request Pipeline</CardTitle>
+      <h2 className="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-400 text-transparent bg-clip-text">Security Architecture</h2>
+      <Card className="mb-12 border-blue-500/20 shadow-md">
+        <CardHeader className="bg-blue-500/5 rounded-t-lg">
+          <CardTitle className="bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text">Request Pipeline</CardTitle>
           <CardDescription>How requests flow through the system</CardDescription>
         </CardHeader>
         <CardContent>
@@ -238,13 +254,13 @@ export default function Home() {
         </CardContent>
       </Card>
 
-      <h2 className="text-2xl font-bold mb-6">Key Security Features</h2>
+      <h2 className="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-400 text-transparent bg-clip-text">Key Security Features</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        <Card>
-          <CardHeader className="pb-2">
+        <Card className="border-purple-500/20 shadow-md">
+          <CardHeader className="pb-2 bg-purple-500/5 rounded-t-lg">
             <div className="flex items-center gap-2 mb-2">
-              <ShieldIcon className="h-5 w-5 text-primary" />
-              <CardTitle className="text-lg">Password Hashing</CardTitle>
+              <ShieldIcon className="h-5 w-5 text-purple-400" />
+              <CardTitle className="text-lg bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">Password Hashing</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
@@ -255,11 +271,11 @@ export default function Home() {
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader className="pb-2">
+        <Card className="border-teal-500/20 shadow-md">
+          <CardHeader className="pb-2 bg-teal-500/5 rounded-t-lg">
             <div className="flex items-center gap-2 mb-2">
-              <LockIcon className="h-5 w-5 text-primary" />
-              <CardTitle className="text-lg">Key Derivation</CardTitle>
+              <LockIcon className="h-5 w-5 text-teal-400" />
+              <CardTitle className="text-lg bg-gradient-to-r from-teal-400 to-emerald-500 text-transparent bg-clip-text">Key Derivation</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
@@ -269,11 +285,11 @@ export default function Home() {
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader className="pb-2">
+        <Card className="border-amber-500/20 shadow-md">
+          <CardHeader className="pb-2 bg-amber-500/5 rounded-t-lg">
             <div className="flex items-center gap-2 mb-2">
-              <DatabaseIcon className="h-5 w-5 text-primary" />
-              <CardTitle className="text-lg">Encryption</CardTitle>
+              <DatabaseIcon className="h-5 w-5 text-amber-400" />
+              <CardTitle className="text-lg bg-gradient-to-r from-amber-400 to-yellow-500 text-transparent bg-clip-text">Encryption</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
