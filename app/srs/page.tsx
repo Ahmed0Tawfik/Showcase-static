@@ -13,66 +13,64 @@ export default function SRSPage() {
         <div className="md:w-72 flex-shrink-0">
           <div className="sticky top-4 p-6 rounded-lg border border-accent/20 shadow-md bg-card">
             <h3 className="text-xl font-semibold mb-6 text-accent tracking-wide">Navigation</h3>
-            <nav className="space-y-3">
-              <a href="#introduction" className="group flex items-center py-2.5 px-4 rounded-md hover:bg-accent/10 text-primary hover:text-primary transition-colors text-base font-medium tracking-wide">
+            <nav className="space-y-1">
+              <a href="#introduction" className="group flex items-center py-2 px-3 rounded-md hover:bg-accent/10 text-primary hover:text-primary transition-colors text-base font-medium tracking-wide">
                 <span className="w-6 h-6 flex items-center justify-center rounded-full bg-indigo-500/10 text-indigo-500 mr-3 text-sm font-semibold group-hover:bg-indigo-500/20 transition-colors">1</span>
                 Introduction
               </a>
               
-              <div className="pl-2 mt-1">
-                <a href="#functional-requirements" className="group flex items-center py-2.5 px-4 rounded-md hover:bg-accent/10 text-primary hover:text-primary transition-colors text-base font-medium tracking-wide">
-                  <span className="w-6 h-6 flex items-center justify-center rounded-full bg-purple-500/10 text-purple-500 mr-3 text-sm font-semibold group-hover:bg-purple-500/20 transition-colors">2</span>
-                  Functional Requirements
+              <a href="#functional-requirements" className="group flex items-center py-2 px-3 rounded-md hover:bg-accent/10 text-primary hover:text-primary transition-colors text-base font-medium tracking-wide">
+                <span className="w-6 h-6 flex items-center justify-center rounded-full bg-purple-500/10 text-purple-500 mr-3 text-sm font-semibold group-hover:bg-purple-500/20 transition-colors">2</span>
+                Functional Requirements
+              </a>
+              
+              <div className="pl-9 space-y-1 mt-1">
+                <a href="#user-authentication" className="block py-1.5 px-3 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
+                  2.1 User Authentication
                 </a>
-                <div className="pl-4 border-l-2 border-muted/60 space-y-2 ml-3 mt-2">
-                  <a href="#user-authentication" className="block py-2 px-4 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
-                    2.1 User Authentication
-                  </a>
-                  <a href="#password-management" className="block py-2 px-4 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
-                    2.2 Password Management
-                  </a>
-                  <a href="#user-interface" className="block py-2 px-4 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
-                    2.3 User Interface
-                  </a>
-                </div>
+                <a href="#password-management" className="block py-1.5 px-3 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
+                  2.2 Password Management
+                </a>
+                <a href="#user-interface" className="block py-1.5 px-3 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
+                  2.3 User Interface
+                </a>
               </div>
               
-              <div className="pl-2 mt-1">
-                <a href="#non-functional-requirements" className="group flex items-center py-2.5 px-4 rounded-md hover:bg-accent/10 text-primary hover:text-primary transition-colors text-base font-medium tracking-wide">
-                  <span className="w-6 h-6 flex items-center justify-center rounded-full bg-teal-500/10 text-teal-500 mr-3 text-sm font-semibold group-hover:bg-teal-500/20 transition-colors">3</span>
-                  Non-Functional Requirements
+              <a href="#non-functional-requirements" className="group flex items-center py-2 px-3 rounded-md hover:bg-accent/10 text-primary hover:text-primary transition-colors text-base font-medium tracking-wide">
+                <span className="w-6 h-6 flex items-center justify-center rounded-full bg-teal-500/10 text-teal-500 mr-3 text-sm font-semibold group-hover:bg-teal-500/20 transition-colors">3</span>
+                Non-Functional Requirements
+              </a>
+              
+              <div className="pl-9 space-y-1 mt-1">
+                <a href="#security" className="block py-1.5 px-3 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
+                  3.1 Security
                 </a>
-                <div className="pl-4 border-l-2 border-muted/60 space-y-2 ml-3 mt-2">
-                  <a href="#security" className="block py-2 px-4 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
-                    3.1 Security
-                  </a>
-                  <a href="#performance" className="block py-2 px-4 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
-                    3.2 Performance
-                  </a>
-                  <a href="#scalability" className="block py-2 px-4 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
-                    3.3 Scalability
-                  </a>
-                  <a href="#usability" className="block py-2 px-4 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
-                    3.4 Usability
-                  </a>
-                  <a href="#reliability" className="block py-2 px-4 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
-                    3.5 Reliability
-                  </a>
-                  <a href="#maintainability" className="block py-2 px-4 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
-                    3.6 Maintainability
-                  </a>
-                  <a href="#constraints" className="block py-2 px-4 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
-                    3.7 Constraints
-                  </a>
-                </div>
+                <a href="#performance" className="block py-1.5 px-3 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
+                  3.2 Performance
+                </a>
+                <a href="#scalability" className="block py-1.5 px-3 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
+                  3.3 Scalability
+                </a>
+                <a href="#usability" className="block py-1.5 px-3 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
+                  3.4 Usability
+                </a>
+                <a href="#reliability" className="block py-1.5 px-3 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
+                  3.5 Reliability
+                </a>
+                <a href="#maintainability" className="block py-1.5 px-3 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
+                  3.6 Maintainability
+                </a>
+                <a href="#constraints" className="block py-1.5 px-3 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
+                  3.7 Constraints
+                </a>
               </div>
               
-              <a href="#assumptions" className="group flex items-center py-2.5 px-4 rounded-md hover:bg-accent/10 text-primary hover:text-primary transition-colors text-base font-medium tracking-wide">
+              <a href="#assumptions" className="group flex items-center py-2 px-3 rounded-md hover:bg-accent/10 text-primary hover:text-primary transition-colors text-base font-medium tracking-wide">
                 <span className="w-6 h-6 flex items-center justify-center rounded-full bg-amber-500/10 text-amber-500 mr-3 text-sm font-semibold group-hover:bg-amber-500/20 transition-colors">4</span>
                 Assumptions
               </a>
               
-              <a href="#deliverables" className="group flex items-center py-2.5 px-4 rounded-md hover:bg-accent/10 text-primary hover:text-primary transition-colors text-base font-medium tracking-wide">
+              <a href="#deliverables" className="group flex items-center py-2 px-3 rounded-md hover:bg-accent/10 text-primary hover:text-primary transition-colors text-base font-medium tracking-wide">
                 <span className="w-6 h-6 flex items-center justify-center rounded-full bg-rose-500/10 text-rose-500 mr-3 text-sm font-semibold group-hover:bg-rose-500/20 transition-colors">5</span>
                 Deliverables
               </a>
