@@ -5,7 +5,20 @@ export default function SRSPage() {
     <div className="container mx-auto py-10 px-4 antialiased">
       <header className="mb-12 text-center">
         <h1 className="text-4xl font-bold mb-3 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-400 text-transparent bg-clip-text gradient-text tracking-tight leading-tight">SupaSafe Requirements Document</h1>
-        <p className="text-muted-foreground max-w-2xl mx-auto text-lg">Version 1.0 - March 24, 2025</p>
+        <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-6">Version 1.2 - March 25, 2025</p>
+        <a 
+          href="https://8ipmaucinc3dz1l7.public.blob.vercel-storage.com/25-3-2025_SRS_v1.2-pEtvpdBxkR4uDaW53KDJX8UdOSzUEa.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-lg hover:opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Download PDF Version
+        </a>
       </header>
 
       <div className="flex flex-col md:flex-row gap-8">
@@ -64,14 +77,28 @@ export default function SRSPage() {
                   3.7 Constraints
                 </a>
               </div>
+
+              <a href="#database-requirements" className="group flex items-center py-2 px-3 rounded-md hover:bg-accent/10 text-primary hover:text-primary transition-colors text-base font-medium tracking-wide">
+                <span className="w-6 h-6 flex items-center justify-center rounded-full bg-blue-500/10 text-blue-500 mr-3 text-sm font-semibold group-hover:bg-blue-500/20 transition-colors">4</span>
+                Database Requirements
+              </a>
+
+              <div className="pl-9 space-y-1 mt-1">
+                <a href="#users-table" className="block py-1.5 px-3 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
+                  4.1 Users Table
+                </a>
+                <a href="#passwords-table" className="block py-1.5 px-3 hover:bg-accent/10 text-primary/90 hover:text-primary transition-colors text-sm tracking-wide rounded-md">
+                  4.2 Passwords Table
+                </a>
+              </div>
               
               <a href="#assumptions" className="group flex items-center py-2 px-3 rounded-md hover:bg-accent/10 text-primary hover:text-primary transition-colors text-base font-medium tracking-wide">
-                <span className="w-6 h-6 flex items-center justify-center rounded-full bg-amber-500/10 text-amber-500 mr-3 text-sm font-semibold group-hover:bg-amber-500/20 transition-colors">4</span>
+                <span className="w-6 h-6 flex items-center justify-center rounded-full bg-amber-500/10 text-amber-500 mr-3 text-sm font-semibold group-hover:bg-amber-500/20 transition-colors">5</span>
                 Assumptions
               </a>
               
               <a href="#deliverables" className="group flex items-center py-2 px-3 rounded-md hover:bg-accent/10 text-primary hover:text-primary transition-colors text-base font-medium tracking-wide">
-                <span className="w-6 h-6 flex items-center justify-center rounded-full bg-rose-500/10 text-rose-500 mr-3 text-sm font-semibold group-hover:bg-rose-500/20 transition-colors">5</span>
+                <span className="w-6 h-6 flex items-center justify-center rounded-full bg-rose-500/10 text-rose-500 mr-3 text-sm font-semibold group-hover:bg-rose-500/20 transition-colors">6</span>
                 Deliverables
               </a>
             </nav>
@@ -93,15 +120,13 @@ export default function SRSPage() {
               </CardHeader>
               <CardContent className="space-y-5 p-6 text-base leading-relaxed tracking-normal">
                 <p className="text-foreground/95">
-                  The SupaSafe application will be a password manager designed to securely store, retrieve, and manage user passwords for various sites and services. It aims to be user-friendly while ensuring strong cryptographic security through master password-based encryption.
+                  The SupaSafe application will be a password manager designed to securely store, retrieve, and manage user passwords for various sites and services. SupaSafe will provide a user-friendly solution for individuals seeking to protect their digital credentials while ensuring ease of access through a streamlined interface. The application will leverage a master password to derive a Key Encryption Key (KEK) and a randomly generated Data Encryption Key (DEK) for robust cryptographic security, ensuring that user data remains protected even in the event of a data breach.
                 </p>
-                <ul className="list-disc pl-7 space-y-3">
-                  <li className="text-foreground/95">The frontend will be developed using React.js.</li>
-                  <li className="text-foreground/95">The backend will use Node.js + Express for API handling and cryptographic operations.</li>
-                  <li className="text-foreground/95">Supabase will serve as the managed PostgreSQL database with built-in security features.</li>
-                </ul>
                 <p className="text-foreground/95">
-                  The document outlines the functional and non-functional requirements, ensuring a secure and efficient user experience.
+                  SupaSafe will be built with a modern tech stack to ensure reliability and performance. The frontend will be developed using React.js, providing a responsive and intuitive user interface. The backend will be powered by Node.js with Express, handling secure API interactions and cryptographic operations. Supabase will serve as the database, offering a scalable and managed PostgreSQL solution with built-in security features like HTTPS.
+                </p>
+                <p className="text-foreground/95">
+                  The purpose of this document is to outline the functional and non-functional requirements for SupaSafe, detailing the features, security measures, performance expectations, and constraints that will guide its development. This ensures that the application will meet user needs while adhering to best practices in security and usability.
                 </p>
               </CardContent>
             </Card>
@@ -278,15 +303,62 @@ export default function SRSPage() {
             </Card>
           </section>
           
+          <section id="database-requirements" className="mb-12">
+            <Card className="border-blue-500/20 shadow-md overflow-hidden">
+              <CardHeader className="bg-blue-500/10 rounded-t-lg py-6">
+                <CardTitle className="text-2xl bg-gradient-to-r from-blue-400 to-indigo-500 text-transparent bg-clip-text gradient-text tracking-tight leading-snug">4. Database Requirements</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-8 p-6 text-base leading-relaxed tracking-normal">
+                <div id="users-table">
+                  <h3 className="text-xl font-semibold mb-5 tracking-tight text-foreground/95">4.1 Users Table</h3>
+                  <p className="mb-4">The users table in Supabase shall store user authentication and encryption data as follows:</p>
+                  <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm">
+                    {`CREATE TABLE Users (
+    ID UUID PRIMARY KEY DEFAULT gen_random_uuid(),  -- GUID primary key (FR1)
+    Email VARCHAR(255) UNIQUE NOT NULL,
+    HashedPass VARCHAR(60) NOT NULL,                -- Bcrypt output for master password hashing (NFR1)
+    Salt VARCHAR(24) NOT NULL,                      -- Base64-encoded 16-byte salt for PBKDF2 KEK derivation (NFR2)
+    LastUpdate TIMESTAMP DEFAULT NOW(),
+    CreationDate TIMESTAMP DEFAULT NOW(),
+    EncryptedDEK VARCHAR(44) NOT NULL,              -- Base64-encoded 32-byte encrypted DEK (NFR3)
+    DEKIV VARCHAR(24) NOT NULL,                     -- Base64-encoded 16-byte IV for DEK encryption (NFR3)
+    KEYCreationDate TIMESTAMP DEFAULT NOW()
+);`}
+                  </pre>
+                </div>
+
+                <div id="passwords-table">
+                  <h3 className="text-xl font-semibold mb-5 tracking-tight text-foreground/95">4.2 Passwords Table</h3>
+                  <p className="mb-4">The passwords table in Supabase shall store encrypted user passwords as follows:</p>
+                  <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm">
+                    {`CREATE TABLE Passwords (
+    ID UUID PRIMARY KEY DEFAULT gen_random_uuid(),    -- GUID primary key
+    UserID UUID NOT NULL,                             -- Foreign key referencing Users.ID (FR4)
+    IV VARCHAR(24) NOT NULL,                          -- Base64-encoded 16-byte IV for AES-256-CBC (NFR3)
+    Username VARCHAR(100) NOT NULL,
+    EncryptedPass VARCHAR(44) NOT NULL,               -- Base64-encoded 32-byte encrypted password (NFR3)
+    SiteName VARCHAR(100) NOT NULL,
+    LastUpdate TIMESTAMP DEFAULT NOW(),
+    CreationDate TIMESTAMP DEFAULT NOW(),
+    WebsiteURL TEXT,
+    FOREIGN KEY (UserID) REFERENCES Users(ID),
+    CONSTRAINT unique_user_username UNIQUE (UserID, Username)  -- Ensures username is unique per user
+);`}
+                  </pre>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+          
           <section id="assumptions" className="mb-12">
             <Card className="border-amber-500/20 shadow-md overflow-hidden">
               <CardHeader className="bg-amber-500/10 rounded-t-lg py-6">
-                <CardTitle className="text-2xl bg-gradient-to-r from-amber-400 to-yellow-500 text-transparent bg-clip-text gradient-text tracking-tight leading-snug">4. Assumptions</CardTitle>
+                <CardTitle className="text-2xl bg-gradient-to-r from-amber-400 to-yellow-500 text-transparent bg-clip-text gradient-text tracking-tight leading-snug">5. Assumptions</CardTitle>
               </CardHeader>
               <CardContent className="p-6 text-base leading-relaxed tracking-normal">
                 <ul className="list-disc pl-7 space-y-2">
-                  <li className="text-foreground/95">Users have modern web browsers.</li>
-                  <li className="text-foreground/95">Supabase's free tier will be sufficient.</li>
+                  <li className="text-foreground/95">Users have access to modern web browsers (e.g., Chrome, Firefox).</li>
+                  <li className="text-foreground/95">Supabase's free tier (500 MB storage, 2 GB bandwidth/month) will suffice for hosting and storage needs.</li>
                 </ul>
               </CardContent>
             </Card>
@@ -295,12 +367,12 @@ export default function SRSPage() {
           <section id="deliverables" className="mb-12">
             <Card className="border-rose-500/20 shadow-md overflow-hidden">
               <CardHeader className="bg-rose-500/10 rounded-t-lg py-6">
-                <CardTitle className="text-2xl bg-gradient-to-r from-rose-400 to-red-500 text-transparent bg-clip-text gradient-text tracking-tight leading-snug">5. Deliverables</CardTitle>
+                <CardTitle className="text-2xl bg-gradient-to-r from-rose-400 to-red-500 text-transparent bg-clip-text gradient-text tracking-tight leading-snug">6. Deliverables</CardTitle>
               </CardHeader>
               <CardContent className="p-6 text-base leading-relaxed tracking-normal">
                 <ul className="list-disc pl-7 space-y-2">
-                  <li className="text-foreground/95">Fully functional SupaSafe application deployed to Vercel/Heroku.</li>
-                  <li className="text-foreground/95">Source code on GitHub with setup instructions.</li>
+                  <li className="text-foreground/95">Fully functional SupaSafe application deployed to Vercel/Heroku with Supabase integration.</li>
+                  <li className="text-foreground/95">Source code hosted on GitHub with a README for setup instructions, including Supabase configuration.</li>
                 </ul>
               </CardContent>
             </Card>

@@ -192,10 +192,26 @@ export default function Home() {
 
         <TabsContent value="srs" className="border rounded-lg p-4">
           <h3 className="text-xl font-bold mb-4">Software Requirements Specification</h3>
-          <p className="mb-4">The SRS document outlines the requirements and specifications for the SupaSafe password manager application.</p>
-          <Link href="/srs">
-            <Button className="w-full">View Full SRS Document</Button>
-          </Link>
+          <p className="mb-6">The SRS document outlines the requirements and specifications for the SupaSafe password manager application.</p>
+          <div className="space-y-4">
+            <Link href="/srs">
+              <Button className="w-full mb-4">View Full SRS Document</Button>
+            </Link>
+            <div className="flex items-center justify-between p-4 bg-accent/10 rounded-lg">
+              <div>
+                <h4 className="font-semibold mb-1">Download PDF Version</h4>
+                <p className="text-sm text-muted-foreground">Version 1.2 - March 25, 2025</p>
+              </div>
+              <a 
+                href="https://8ipmaucinc3dz1l7.public.blob.vercel-storage.com/25-3-2025_SRS_v1.2-pEtvpdBxkR4uDaW53KDJX8UdOSzUEa.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+              >
+                Download PDF
+              </a>
+            </div>
+          </div>
         </TabsContent>
       </Tabs>
 
@@ -226,7 +242,7 @@ export default function Home() {
           <CardContent>
             <div className="relative h-[300px] w-full">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ERD-Rkj3z3kVeMoFL9ocBy8dz20TTERhCH.png"
+                src="https://8ipmaucinc3dz1l7.public.blob.vercel-storage.com/ERD-CdrDAMTjwFCQQ2NbJQAt54ceJ5eO6j.png"
                 alt="Entity Relationship Diagram"
                 fill
                 className="object-contain"
